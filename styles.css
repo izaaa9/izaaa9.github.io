@@ -67,6 +67,44 @@ img {
     letter-spacing: 1px;
 }
 
+.projects {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.projects h2 {
+    color: white;
+    margin-bottom: 25px;
+}
+
+.projects h3 {
+    color: #d5e5d3;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.projects p {
+    margin: 12px 0;
+}
+
+.projects a {
+    display: block;
+    padding: 14px 20px;
+    background-color: #455d49;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.projects a:hover {
+    background-color: #62836a;
+    color: white;
+}
+
+
+
 @media (max-width: 600px) {
 
 

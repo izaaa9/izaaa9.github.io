@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FAF9F3;
+    color: #244D3A;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-areas:
+        "header header header"
+        "sidebar welcome welcome"
+        "sidebar design interests"
+        "footer footer footer";
+    gap: 15px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+header {
+    grid-area: header;
+    background-color: #A8C9AD;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: #D8E8D4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+section {
+    background-color: #E5F0E3;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.welcome {
+    grid-area: welcome;
+}
+
+.design {
+    grid-area: design;
+}
+
+.interests {
+    grid-area: interests;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #A8C9AD;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.design:hover {
+    filter: brightness(1.12);
+}
+
+.interests:hover {
+    filter: grayscale(70%);
+}
+
+
+.design:hover {
+    transform: scale(1.04);
+}
+
+.interests:hover {
+    transform: rotate(2deg);
+}
+
+.design, .interests {
+    transition: transform 0.3s ease,
+                filter 0.3s ease;
+}
+
+.welcome h2 {
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "welcome"
+            "design"
+            "interests"
+            "footer";
+        margin: 10px auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .welcome h2 {
+        animation: none;
+    }
+
+    .design, .interests {
+        transition: none;
+    }
+}

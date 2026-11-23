@@ -1,0 +1,214 @@
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4;
+
+    margin: 20px;
+
+}
+
+h1 {
+
+    background-color: #16833b;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 15px;
+
+}
+
+nav {
+
+    text-align: center;
+
+    margin: 20px;
+
+}
+
+nav a {
+
+    margin: 15px;
+
+    color: #16833b;
+
+}
+
+.albums {
+
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+}
+
+.album {
+
+    background-color: white;
+
+    border: 1px solid #16833b;
+
+    padding: 15px;
+
+    margin: 10px;
+
+    width: 130px;
+
+    text-align: center;
+
+}
+
+.album:hover {
+
+    transform: translateY(20px) scale(1.1);
+
+}
+
+.extra {
+
+    display: none;
+
+}
+
+.album:hover .extra {
+
+    display: block;
+
+}
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: white;
+
+}
+
+th, td {
+
+    border: 1px solid black;
+
+    padding: 10px;
+
+    text-align: left;
+
+}
+
+th {
+
+    background-color: #16833b;
+
+    color: white;
+
+}
+
+.store-image {
+
+    float: left;
+
+    margin: 10px;
+
+    position: relative;
+
+}
+
+.mission {
+
+    position: relative;
+
+    top: 10px;
+
+    background-color: #d9f2df;
+
+    padding: 20px;
+
+}
+
+.mission h3 {
+
+    position: absolute;
+
+    top: -15px;
+
+    right: 10px;
+
+}
+
+footer {
+
+    clear: both;
+
+    background-color: #16833b;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 10px;
+
+    margin-top: 30px;
+
+}
+
+.albums {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-evenly;
+align-items: center;
+gap: 15px;
+margin: 20px 0;
+}
+
+.album {
+width: 180px;
+min-width: 0;
+min-height: 150px;
+padding: 15px;
+border: 1px solid #ccc;
+text-align: center;
+background-color: white;
+transition: transform 0.3s ease;
+position: relative;
+}
+
+.album:hover {
+    transform: translateY(20px) scale(1.1);
+    z-index: 10;
+    background-color: #f0f0f0;
+}
+.store-image {
+float: left;
+width: 150px;
+height: 150px;
+margin: 0 15px 10px 0;
+}
+
+.mission {
+position: relative;
+clear: both;
+min-height: 60px;
+padding: 20px;
+background-color: #e5f2d5;
+}
+
+.mission h3 {
+position: absolute;
+top: 5px;
+right: 15px;
+margin: 0;
+}
+
+.mission p {
+padding-top: 15px;
+}

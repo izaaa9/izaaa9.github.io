@@ -1,0 +1,24 @@
+# Local Python environment and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local database, staff credentials, session secret, and environment settings
+instance/
+*.sqlite
+*.sqlite3
+*.db
+.env
+.env.*
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated archives and temporary output
+*.zip
+*.log

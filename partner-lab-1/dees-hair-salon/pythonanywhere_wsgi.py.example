@@ -1,0 +1,16 @@
+"""Copy into the WSGI configuration file linked on PythonAnywhere's Web tab.
+
+Replace YOURUSERNAME with your account name. Select the same Python version
+for the web app and virtual environment, then reload the web app.
+"""
+
+import sys
+
+project_path = "/home/YOURUSERNAME/dees-hair-salon"
+if project_path not in sys.path:
+    sys.path.insert(0, project_path)
+
+from app import app as application
+
+# The hosted website is accessed over HTTPS.
+application.config["SESSION_COOKIE_SECURE"] = True

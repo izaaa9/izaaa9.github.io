@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dee's Hair Salon. Thoughtful cuts, beautiful color, and a little time for yourself. Explore our services and book an appointment.">
+  <meta name="theme-color" content="#35483c">
+  <meta name="robots" content="noindex, nofollow">
+  <title>{% block title %}Dee's Hair Salon | A little you time{% endblock %}</title>
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script id="salon-config" type="application/json">{{ config | tojson }}</script>
+  {% if preview %}<script src="{{ url_for('static', filename='js/preview-api.js') }}" defer></script>{% endif %}
+  <script src="{{ url_for('static', filename='js/common.js') }}" defer></script>
+  {% block scripts %}{% endblock %}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% if preview %}<div class="preview-banner">Interactive preview <span>Bookings stay in this browser. Please use sample details.</span></div>{% endif %}
+  <header class="site-header">
+    <div class="header-inner container">
+      <a href="/" class="brand" aria-label="Dee's Hair Salon home"><span class="brand-name">Dee’s<span class="brand-dot">✳</span></span><span class="brand-caption">HAIR SALON</span></a>
+      <nav class="main-nav" aria-label="Main navigation"><a href="/#services">Services &amp; pricing</a><a href="/#about">Our salon</a><a href="/#visit">Visit us</a></nav>
+      <div class="header-actions"><a class="manage-link" href="/manage">My appointment</a><a class="button button-small" href="/#book">Book a visit <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </header>
+  <main id="main">{% block content %}{% endblock %}</main>
+  <footer class="site-footer"><div class="container footer-top"><a href="/" class="brand"><span class="brand-name">Dee’s<span class="brand-dot">✳</span></span><span class="brand-caption">HAIR SALON</span></a><p>Good hair. A little care. Time for you.</p><a href="/staff">{% if preview %}Demo staff schedule{% else %}Staff sign in{% endif %} <span aria-hidden="true">↗</span></a></div><div class="container footer-bottom"><span>© {{ year }} Dee’s Hair Salon</span><span>Fictitious salon · School project · Sample prices and services</span></div></footer>
+  <noscript><div class="noscript">Please enable JavaScript to view appointment availability and book a visit.</div></noscript>
+</body>
+</html>
